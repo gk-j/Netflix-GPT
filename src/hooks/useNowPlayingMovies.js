@@ -9,7 +9,7 @@ export default function useNowPlayingMovies(){
     const getNowPlayingMovies = async ()=>{
         const data = await fetch('https://api.themoviedb.org/3/movie/now_playing?language=en-US&page=1', options)
         const jsonData = await  data.json()
-        console.log("Browse",jsonData)
+        // console.log("Browse",jsonData)
         dispatch(addNowPlayingMovies(jsonData.results))
     }
     useEffect(()=>{
