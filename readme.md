@@ -39,6 +39,10 @@
 - Made the Browse Page amazing with Tailwind CSS
 - usePopularMovies Custom hook
 - useTopRatedMovies Custom hook
+- GPT Search Page
+- GPT Search Bar
+- (FEATURE) Multi-Language Feature in GPT-search App
+
 # Features
 - Login/Sign Up
     - Sign In /Sign up Form

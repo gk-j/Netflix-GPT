@@ -22,7 +22,7 @@ const responsive = {
   };
 
 export default function MovieList({title,movies}){
-    console.log(movies)
+    // console.log(movies)
     return(
         <div className="p-5">
             <h1 className="text-2xl font-bold py-2 text-white">{title}</h1>
