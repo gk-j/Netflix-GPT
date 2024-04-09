@@ -27,7 +27,7 @@ export default function GptSearchBar(){
           if(!gptResults.choices){
 
           }
-          console.log(gptResults.choices?.[0]?.message?.content)
+        //   console.log(gptResults.choices?.[0]?.message?.content)
           const gptMovies = gptResults.choices?.[0]?.message?.content.split(",")
           const promiseArray = gptMovies.map((movie)=>searchMovieTMDB(movie));
           const tmdbResults = await Promise.all(promiseArray)
@@ -35,9 +35,9 @@ export default function GptSearchBar(){
         dispatch(addGptMovieResult({movieNames:gptMovies,movieResults:tmdbResults}))
     }
     return(
-        <div className="pt-[10%] flex justify-center ">
-            <form className="w-1/2 bg-black grid grid-cols-12" onSubmit={(e)=>e.preventDefault()}>
-                <input ref={searchText} type="text" className="p-4 m-6 col-span-9" placeholder={lang[langKey].gptSearchPlaceholder}/>
+        <div className="pt-[33%] md:pt-[10%] flex justify-center ">
+            <form className="w-full md:w-1/2 bg-black grid grid-cols-12" onSubmit={(e)=>e.preventDefault()}>
+                <input ref={searchText} type="text" className="p-4 m-6 col-span-9 " placeholder={lang[langKey].gptSearchPlaceholder}/>
                 <button className="py-2 px-4 m-4 col-span-3  bg-red-700 text-white rounded" onClick={handleGPTSearchClick}>{lang[langKey].search}</button>
             </form>
         </div>

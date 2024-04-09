@@ -16,7 +16,7 @@ const responsive = {
     },
     mobile: {
       breakpoint: { max: 640, min: 0 },
-      items: 3,
+      items: 4,
       slidesToSlide: 1 // optional, default to 1.
     }
   };
@@ -25,7 +25,7 @@ export default function MovieList({title,movies}){
     // console.log(movies)
     return(
         <div className="p-5">
-            <h1 className="text-2xl font-bold py-2 text-white">{title}</h1>
+            <h1 className="text-xl md:text-2xl font-bold py-2 text-white">{title}</h1>
             {/* <Carousel responsive={responsive} showDots={true} keyBoardControl={true}>
             <div className="flex">
             
@@ -49,7 +49,7 @@ export default function MovieList({title,movies}){
                     customTransition="all .5"
                     transitionDuration={500}
                     containerClass="carousel-container"
-                    removeArrowOnDeviceType={["tablet", "mobile"]}
+                    removeArrowOnDeviceType={""}
                     dotListClass="custom-dot-list-style"
                     itemClass="carousel-item-padding-40-px"
                 >

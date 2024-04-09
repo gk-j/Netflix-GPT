@@ -4,12 +4,14 @@ import GptSearchBar from "./GptSearchBar";
 
 export default function GptSearch(){
     return(
-        <div>
-            <div className="fixed -z-10">
-                <img src={BG_IMG} alt="bg"/>
+        <>
+        <div className="fixed -z-10">
+                <img className="h-screen object-cover w-screen" src={BG_IMG} alt="bg"/>
             </div>
+        <div>
             <GptSearchBar/>
             <GptMovieSuggestions/>
         </div>
+        </>
     )
 }

@@ -10,7 +10,7 @@ export default function GptMovieSuggestions(){
                 {movieNames.map((movie,index)=><MovieList key={movie} title={movie} movies={movieResults[index]}/>)}
                 
             </div>
-
+            <h1 className="text-center text-white text-2xl font-bold mb-2">The End</h1>
         </div>
     )
 }
