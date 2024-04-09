@@ -54,7 +54,7 @@ export default function MovieList({title,movies}){
                     itemClass="carousel-item-padding-40-px"
                 >
                     {movies.map(movie => (
-                        <MovieCard key={movie.id} posterPath={movie.poster_path} />
+                       movie.poster_path&& <MovieCard key={movie.id} posterPath={movie.poster_path} />
                     ))}
                 </Carousel>
             ) : (
