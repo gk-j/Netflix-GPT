@@ -51,7 +51,10 @@
 - Added .env file
 - Adding .env file to gitignore
 - Made our Site Responsive
-
+- useTrendingOfTheDay Custom Hook
+- useTrendingOfTheWeek  Custom Hook 
+- useUpComingMovies Custom Hook
+- created MovieDetails
 # Features
 - Login/Sign Up
     - Sign In /Sign up Form

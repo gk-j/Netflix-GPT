@@ -1,6 +1,6 @@
 import { onAuthStateChanged, signOut } from "firebase/auth";
 import { auth } from "../utils/firebase"
-import { Link, useNavigate } from "react-router-dom";
+import { Link, useNavigate, useParams } from "react-router-dom";
 import { useDispatch, useSelector } from "react-redux";
 import { useEffect } from "react";
 import { addUser, removeUser } from "../utils/userSlice";
@@ -8,7 +8,7 @@ import { LOGO, SUPPORTED_LANGUAGES } from "../utils/constant";
 import { toggleGptSearchView } from "../utils/gptSlice";
 import { changeLanguage } from "../utils/configSlice";
 const Header = ()=>{
-
+    const {id}=useParams()
     const navigate = useNavigate()
     const dispatch = useDispatch()
     const user = useSelector(store=>store.user)
@@ -33,7 +33,7 @@ const Header = ()=>{
                 photoURL: photoURL,
               })
             );
-            navigate("/browse");
+           !id&& navigate("/browse");
           } else {
             dispatch(removeUser());
             navigate("/");
