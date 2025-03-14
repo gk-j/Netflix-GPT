@@ -5,21 +5,22 @@ import 'react-multi-carousel/lib/styles.css';
 
 const responsive = {
     desktop: {
-      breakpoint: { max: 1280, min: 1024 },
-      items: 9,
-      slidesToSlide: 1 // optional, default to 1.
+        breakpoint: { max: 3000, min: 1024 },  // Covers all desktops
+        items: 11, // Reduce to 6 for better visibility
+        slidesToSlide: 1
     },
     tablet: {
-      breakpoint: { max: 768, min: 640 },
-      items: 6,
-      slidesToSlide: 1 // optional, default to 1.
+        breakpoint: { max: 1024, min: 768 },  // Adjusted to include your MacBook
+        items: 6,  // Reduce items for better layout
+        slidesToSlide: 1
     },
     mobile: {
-      breakpoint: { max: 640, min: 0 },
-      items: 4,
-      slidesToSlide: 1 // optional, default to 1.
+        breakpoint: { max: 768, min: 0 },
+        items: 3, // Reduce to 2 for smaller screens
+        slidesToSlide: 1
     }
-  };
+};
+
 
 export default function MovieList({title,movies}){
     // console.log(movies)
