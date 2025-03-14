@@ -63,8 +63,7 @@ const Header = ()=>{
                     return <option key={lang.identifier} value={lang.identifier}>{lang.name}</option>
                   })}
                 </select>:""}
-                
-                <button onClick={handleGptSearchClick} className="py-2 px-4 m-2 bg-purple-800 text-white rounded-md">{showGptSearch?"Home":"GPT Search"}</button>
+                <Link to="/"><button onClick={handleGptSearchClick} className="py-2 px-4 m-2 bg-purple-800 text-white rounded-md">{showGptSearch?"Home":"GPT Search"}</button></Link>
                 <img className="hidden md:block w-10 h-10 mt-2 " src={user.photoURL} alt="usericon"/>
                 <button onClick={handleSignOut} className="mx-2 hover:bg-red-500 hover:p-2 rounded-md font-bold text-white">(Sign Out)</button>
             </div>}
